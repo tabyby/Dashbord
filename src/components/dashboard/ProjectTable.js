@@ -81,8 +81,6 @@ class ProjectTables extends React.Component {
     })
   }
   render(){
-
-  
   return (
     <div>
       <Card>
