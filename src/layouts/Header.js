@@ -32,6 +32,16 @@ const Header = () => {
     
     navigate("/login");
   };
+  let style= {
+    backgroundColor : "#008CBA",
+    border : "none",
+    color:"white",
+    padding:"15px 32px",
+    textAlign : "center",
+    textDecoration : "none",
+    display:"inline-block",
+    fontSize : "16px",
+  }
   return (
     <Navbar color="dark" dark expand="md">
       <div className="d-flex align-items-center">
@@ -60,7 +70,7 @@ const Header = () => {
           )}
         </Button>
       </div>
-      <button onClick={Logout}>Log out</button>
+      <button style={style}  onClick={Logout}>Log out</button>
     </Navbar>
   );
 };

@@ -28,6 +28,16 @@ handleDelete = id => {
   })
 }
 render(){
+  let style= {
+    backgroundColor : "#008CBA",
+    border : "none",
+    color:"white",
+    padding:"15px 32px",
+    textAlign : "center",
+    textDecoration : "none",
+    display:"inline-block",
+    fontSize : "16px",
+  }
   return(
     <div>
       <Card>
@@ -64,7 +74,7 @@ render(){
                   </td>
 
                   <td>{tdata.budget}</td>
-                  <button onClick={()=>this.handleDelete(tdata.id)} >Delete user</button>
+                  <button style={style} onClick={()=>this.handleDelete(tdata.id)} >Delete user</button>
                 </tr>
               ))}
             </tbody>
