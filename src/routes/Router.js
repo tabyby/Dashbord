@@ -23,8 +23,8 @@ const ThemeRoutes = [
     path: "/",
     element: <FullLayout />,
     children: [
+
       { path: "/", element: <Navigate to="/login" /> },
-      { path: "/login", exact: true, element: <Login /> },
       { path: "/starter", exact: true, element: <Starter /> },
       { path: "/about", exact: true, element: <About /> },
       { path: "/alerts", exact: true, element: <Alerts /> },
@@ -36,7 +36,10 @@ const ThemeRoutes = [
       { path: "/forms", exact: true, element: <Forms /> },
       { path: "/breadcrumbs", exact: true, element: <Breadcrumbs /> },
     ],
+    
   },
+  { path: "/login", exact: true, element: <Login /> },
+
 ];
 
 export default ThemeRoutes;

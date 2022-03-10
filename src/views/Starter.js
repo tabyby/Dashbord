@@ -3,6 +3,8 @@ import SalesChart from "../components/dashboard/SalesChart";
 import Feeds from "../components/dashboard/Feeds";
 import ProjectTables from "../components/dashboard/ProjectTable";
 import TopCards from "../components/dashboard/TopCards";
+import "../layouts/Sidebar";
+// import Sidebar from "../layouts/Sidebar";
 import Blog from "../components/dashboard/Blog";
 import bg1 from "../assets/images/bg/bg1.jpg";
 import bg2 from "../assets/images/bg/bg2.jpg";
@@ -71,8 +73,10 @@ class Starter extends React.Component {
 
   return (
     <div>
+      
       {/***Top Cards***/}
       <Row>
+        
         <Col sm="6" lg="3">
           <TopCards
             bg="bg-light-success text-success"
@@ -82,6 +86,7 @@ class Starter extends React.Component {
             icon="bi bi-person"
           />
         </Col>
+        
         <Col sm="6" lg="3">
           <TopCards
             bg="bg-light-danger text-danger"

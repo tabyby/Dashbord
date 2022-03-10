@@ -6,12 +6,16 @@ const SalesChart = () => {
     series: [
       {
         name: "Users",
-        data: [0, 31, 40, 300, 51, 42, 200, 100],
+        data: [0, 5, 6, 10, 15, 18, 20, 40],
       },
       {
         name: "Doctors",
-        data: [0, 400, 32, 45, 32, 0, 52, 300],
+        data: [0, 5, 8, 9, 10, 13, 17, 21],
       },
+      {
+        name:"appointments",
+        data : [0,2,3,5,10,12,18,20]
+      }
     ],
     options: {
       chart: {
@@ -30,14 +34,14 @@ const SalesChart = () => {
       },
       xaxis: {
         categories: [
-          "Jan",
+          // "Jan",
           "Feb",
           "March",
           "April",
-          "May",
-          "June",
-          "July",
-          "Aug",
+          // "May",
+          // "June",
+          // "July",
+          // "Aug",
         ],
       },
     },

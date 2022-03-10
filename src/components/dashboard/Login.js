@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import GmailLogin from "./Gmaillogin";
+import "./login.css"
 
 const Login = () => {
   const [data, setData] = useState({ email: "", password: "" });
@@ -23,7 +24,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = "http://localhost:3000/admin/login";
+      const url = "http://localhost:3000/admin/login"
       await axios.post(url, data).then((response) => {
         if (
           response.data === "Invalid Password" ||
@@ -145,11 +146,11 @@ const Login = () => {
 
                           <GmailLogin />
                         </div>
-                        <Link to="/signup">
+                        {/* <Link to="/signup">
                           <div class="text-center d-flex justify-content-between mt-4">
                             <p>You don't have an account yet?</p>
                           </div>
-                        </Link>
+                        </Link> */}
                       </form>
                     </div>
                   </div>
