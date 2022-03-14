@@ -26,11 +26,7 @@ const navigation = [
 
 
 
-  {
-    title: "About",
-    href: "/about",
-    icon: "bi bi-speedometer2",
-  },
+
 ];
 
 const Sidebar = () => {
