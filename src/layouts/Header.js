@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {
   Navbar,
   Collapse,
@@ -19,7 +19,7 @@ import user1 from "../assets/images/users/user1.jpg";
 const Header = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   const [dropdownOpen, setDropdownOpen] = React.useState(false);
-
+  const navigate = useNavigate();
   const toggle = () => setDropdownOpen((prevState) => !prevState);
   const Handletoggle = () => {
     setIsOpen(!isOpen);
@@ -27,6 +27,21 @@ const Header = () => {
   const showMobilemenu = () => {
     document.getElementById("sidebarArea").classList.toggle("showSidebar");
   };
+  const Logout = () => {
+    console.log("de5let")
+    
+    navigate("/login");
+  };
+  let style= {
+    backgroundColor : "#008CBA",
+    border : "none",
+    color:"white",
+    padding:"15px 32px",
+    textAlign : "center",
+    textDecoration : "none",
+    display:"inline-block",
+    fontSize : "16px",
+  }
   return (
     <Navbar color="dark" dark expand="md">
       <div className="d-flex align-items-center">
@@ -55,8 +70,8 @@ const Header = () => {
           )}
         </Button>
       </div>
-            <button>Log out</button>
-       </Navbar>
+      <button style={style}  onClick={Logout}>Log out</button>
+    </Navbar>
   );
 };
 

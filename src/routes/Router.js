@@ -5,7 +5,7 @@ import { Navigate } from "react-router-dom";
 const FullLayout = lazy(() => import("../layouts/FullLayout.js"));
 
 /***** Pages ****/
-
+const Login = lazy(() => import("../components/dashboard/Login"));
 const Starter = lazy(() => import("../views/Starter.js"));
 const About = lazy(() => import("../views/About.js"));
 const Alerts = lazy(() => import("../views/ui/Alerts"));
@@ -16,7 +16,6 @@ const Grid = lazy(() => import("../views/ui/Grid"));
 const Tables = lazy(() => import("../views/ui/Tables"));
 const Forms = lazy(() => import("../views/ui/Forms"));
 const Breadcrumbs = lazy(() => import("../views/ui/Breadcrumbs"));
-
 /*****Routes******/
 
 const ThemeRoutes = [
@@ -24,7 +23,8 @@ const ThemeRoutes = [
     path: "/",
     element: <FullLayout />,
     children: [
-      { path: "/", element: <Navigate to="/starter" /> },
+
+      { path: "/", element: <Navigate to="/login" /> },
       { path: "/starter", exact: true, element: <Starter /> },
       { path: "/about", exact: true, element: <About /> },
       { path: "/alerts", exact: true, element: <Alerts /> },
@@ -36,7 +36,10 @@ const ThemeRoutes = [
       { path: "/forms", exact: true, element: <Forms /> },
       { path: "/breadcrumbs", exact: true, element: <Breadcrumbs /> },
     ],
+    
   },
+  { path: "/login", exact: true, element: <Login /> },
+
 ];
 
 export default ThemeRoutes;

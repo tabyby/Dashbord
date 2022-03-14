@@ -1,0 +1,9 @@
+.login,
+.image {
+  min-height: 100vh;
+}
+.bg-image {
+  background-image: url("https://media.discordapp.net/attachments/936015556287528980/947614190263210035/cc93f1595f4ec18589d585e5d9910c2f.jpg?width=473&height=473");
+  background-size: cover;
+  background-position: center center;
+}

@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, {Component} from "react";
+import "../../layouts/Sidebar";
 import { Card, CardBody, CardTitle, CardSubtitle, Table } from "reactstrap";
+import Sidebar from "../../layouts/Sidebar";
 
 export default class Grid extends Component {
   constructor(){
@@ -28,8 +30,20 @@ export default class Grid extends Component {
     })
   }
   render(){
+
+    let style= {
+      backgroundColor : "#008CBA",
+      border : "none",
+      color:"white",
+      padding:"15px 32px",
+      textAlign : "center",
+      textDecoration : "none",
+      display:"inline-block",
+      fontSize : "16px",
+    }
     return(
-      <div>
+      
+<div>
       <Card>
         <CardBody>
           <CardTitle tag="h5">Doctors Listing</CardTitle>
@@ -68,7 +82,7 @@ export default class Grid extends Component {
                   </td>
 
                   <td>{tdata.budget}</td>
-                  <button onClick={()=>this.handleDelete(tdata.id)} >Delete Doctor</button>
+                  <button style={style} onClick={()=>this.handleDelete(tdata.id)} >Delete Doctor</button>
                 </tr>
               ))}
             </tbody>
