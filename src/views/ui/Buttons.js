@@ -18,13 +18,13 @@ componentDidMount(){
     })
   })
 }
-handleDelete = id => {
-  axios.delete(`http://localhost:3000/admin/api/deleteUsers/${id}`)
+handleDelete = id_user => {
+  axios.delete(`http://localhost:3000/admin/api/deleteUsers/${id_user}`)
   .then(response=>{
     console.log(response.data)
   })
   this.setState({
-    users : this.state.users.filter(user=>user.id!==id)
+    users : this.state.users.filter(user=>user.id_user!==id_user)
   })
 }
 render(){
@@ -74,7 +74,7 @@ render(){
                   </td>
 
                   <td>{tdata.budget}</td>
-                  <button style={style} onClick={()=>this.handleDelete(tdata.id)} >Delete user</button>
+                  <button style={style} onClick={()=>this.handleDelete(tdata.id_user)} >Delete user</button>
                 </tr>
               ))}
             </tbody>
